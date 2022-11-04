@@ -5,7 +5,8 @@ const CounterPro = () => {
   let [count, setCount] = useState(0);
 
   const handleAdd = () => {
-    setCount(count + 1);
+    // setCount(count + 1);
+    setCount(currentCount => currentCount + 1);
   };
   
   useEffect(() =>{ // dijalankan setelah selesai render
@@ -16,7 +17,7 @@ const CounterPro = () => {
     <>
       <div>Counter Pro</div>
       <h1>{count}</h1>
-      <button onClick={handleAdd}>Click</button>
+      <button onClick={handleAdd}>Plus</button>
     </>
   );
 }
