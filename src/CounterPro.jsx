@@ -1,15 +1,17 @@
 import React, { useState } from 'react'
+import { useEffect } from 'react';
 
 const CounterPro = () => {
   let [count, setCount] = useState(0);
 
   const handleAdd = () => {
     setCount(count + 1);
-    console.log(count);
   };
-
-    
-
+  
+  useEffect(() =>{ // dijalankan setelah selesai render
+    console.log(count);
+  },[count])
+  
   return (
     <>
       <div>Counter Pro</div>
